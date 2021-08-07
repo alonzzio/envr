@@ -6,7 +6,8 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func LoadEnv(envDirectory string, filename string) error {
+// LoadEnv loads env file from directory. Add env file containing folder and file name
+func LoadEnv(envDirectory string, filename ...string) error {
 	if len(envDirectory) < 1 {
 		return errors.New("environment directory not supplied")
 	}
