@@ -1,4 +1,4 @@
-module github.com/alonzzio/envr/envr
+module github.com/alonzzio/envr
 
 go 1.16
 
