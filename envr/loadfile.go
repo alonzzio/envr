@@ -2,7 +2,6 @@ package envr
 
 import (
 	"errors"
-	"fmt"
 	"github.com/joho/godotenv"
 )
 
@@ -16,12 +15,10 @@ func LoadEnv(envDirectory string, filenames ...string) error {
 	for _, file := range filenames {
 		file = envDirectory + "/" + file // building the directory path
 		f = append(f, file)
-		fmt.Println(file)
 	}
 
 	// loads environment files from  director
 	err := godotenv.Load(f...)
-	//err := godotenv.Load(fmt.Sprintf("%v/%v", envDirectory, filename))
 	if err != nil {
 		return err
 	}
