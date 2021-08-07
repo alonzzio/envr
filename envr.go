@@ -2,6 +2,7 @@ package envr
 
 import (
 	"errors"
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -58,4 +59,8 @@ func GetString(key string) (string, error) {
 		return "", errors.New("empty environment value or key not exists")
 	}
 	return resultStr, nil
+}
+
+func TestFunc() {
+	fmt.Println("called")
 }
