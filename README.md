@@ -2,6 +2,7 @@
 Simple env return framework
 
 Used package : https://github.com/joho/godotenv
+
 Os Package
 
 ## Usage
@@ -13,7 +14,8 @@ go get github.com/alonzzio/envr/envr
 
    
 ```
-	err = envr.LoadEnv(parent+"/env", "environment.env","environment1.env")
+	directoryPath := "" // Your env files direcory. please add path with out '/'.
+	err = envr.LoadEnv("directoryPath", "environment.env","environment1.env")
 	if err != nil {
 		return err
 	}
