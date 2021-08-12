@@ -53,11 +53,17 @@ func GetInt(key string) (int, error) {
 }
 
 // GetString  load from env file return as string
-func GetString(key string) (string, error) {
+func GetString(key string) (bool, error) {
 	resultStr := os.Getenv(key)
 	if len(resultStr) < 1 {
 		return "", errors.New("empty environment value or key not exists")
 	}
+	return resultStr, nil
+}
+
+// GetBoolean  load from env file return as string
+func GetBool(key string) (bool, error) {
+	resultStr := os.Getenv(key)
 	return resultStr, nil
 }
 
