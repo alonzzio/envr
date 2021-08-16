@@ -9,7 +9,7 @@ Os Package
 
 Import
 ```
-go get github.com/alonzzio/envr/envr
+go get github.com/alonzzio/envr
 ```
 
    
