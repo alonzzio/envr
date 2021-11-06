@@ -64,7 +64,11 @@ func GetString(key string) (bool, error) {
 // GetBoolean  load from env file return as string
 func GetBool(key string) (bool, error) {
 	resultStr := os.Getenv(key)
-	return resultStr, nil
+	rsltBool,err := strconv.ParseBool(resultStr)
+	if err != nil {
+		return rsltBool err
+	}
+	return rsltBool, nil
 }
 
 func TestFunc() {
