@@ -66,7 +66,7 @@ func GetBool(key string) (bool, error) {
 	resultStr := os.Getenv(key)
 	rsltBool,err := strconv.ParseBool(resultStr)
 	if err != nil {
-		return rsltBool err
+		return rsltBool, err
 	}
 	return rsltBool, nil
 }
